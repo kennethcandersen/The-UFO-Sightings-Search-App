@@ -1,6 +1,6 @@
 # Javascript Challenge: The UFO Sightings Search App
 
-<a href="https://github.com/kennethcandersen/web-scraping-challenge/blob/main/screenshot_of_final_app2.png" target="_blank"><img width="900" alt="Final App Screenshot" src="https://github.com/kennethcandersen/web-scraping-challenge/blob/main/screenshot_of_final_app2.png"></a>
+<a href="https://github.com/kennethcandersen/javascript-challenge/blob/main/index_screenshot.png" target="_blank"><img width="900" alt="Final App Screenshot" src="https://github.com/kennethcandersen/javascript-challenge/blob/main/index_screenshot.png"></a>
 
 **EXECUTIVE SUMMARY**
 
