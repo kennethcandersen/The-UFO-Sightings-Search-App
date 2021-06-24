@@ -79,17 +79,6 @@ var shapeOptions = shapes.filter(onlyUnique).sort();
     shapeForm.append("option").text(shape)
 });
 
-//   // DURATIONS - discontinued because the data is a mess
-//   // Select form
-//   var durationForm = d3.select("#duration");
-//   // Get states from dataset, then filter for unique values, and sort them
-// var durations = tableData.map(ufosighting => ufosighting.durationMinutes);
-// var durationOptions = durations.filter(onlyUnique).sort();
-//   // Insert list of unique states into the filter dropdown menu in the HTML file
-//   durationOptions.forEach(duration => {
-//     durationForm.append("option").text(duration)
-// });
-
 // CREATE EVENT HANDLERS
 
 // Note that I turned off the filterButton because the "change" event
