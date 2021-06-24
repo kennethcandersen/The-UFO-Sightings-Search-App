@@ -22,8 +22,6 @@ tableData.forEach((ufoSighting) => {
 var filterButton = d3.select("#filter-btn");
 var resetButton = d3.select("#reset-btn");
 
-
-
 // SET UP FORMS AND ARRAYS FOR DROPDOWN FILTER MENU ITEMS
 
   // DATES
@@ -81,7 +79,7 @@ var shapeOptions = shapes.filter(onlyUnique).sort();
     shapeForm.append("option").text(shape)
 });
 
-//   // DURATIONS
+//   // DURATIONS - discontinued because the data is a mess
 //   // Select form
 //   var durationForm = d3.select("#duration");
 //   // Get states from dataset, then filter for unique values, and sort them
@@ -94,20 +92,13 @@ var shapeOptions = shapes.filter(onlyUnique).sort();
 
 // CREATE EVENT HANDLERS
 
-  // BUTTONS
-  // NOTE TO GRADER: I added a form "reset" button that lets you start the search
-  // with the fields blank. 
-           
+// Note that I turned off the filterButton because the "change" event
+//   automatically triggers the runEnter function (the filterbutton 
+//   is redundant)
+     
 resetButton.on('click', resetTable);
-filterButton.on('click', runEnter);
-  
-  // Form text imput fields
-datetimeForm.on("submit",runEnter);
-cityForm.on("submit",runEnter);
-stateForm.on("submit",runEnter);
-countryForm.on("submit",runEnter);
-shapeForm.on("submit",runEnter);
-
+// filterButton.on('click', runEnter);
+d3.selectAll("select").on("change",runEnter);
 
 // FUNCTION TO RESET THE FORM
 function resetTable() {
@@ -131,9 +122,11 @@ function runEnter() {
 
     // Prevent the page from refreshing
     d3.event.preventDefault();
-    
+
+    // Clear the existing table
     var tbody = d3.select("tbody")
     tbody.html("");
+
     // Select the input element and get the raw HTML node
     var datetimeInput = d3.select("#datetime").property("value");
     var cityInput = d3.select("#city").property("value");
@@ -141,6 +134,8 @@ function runEnter() {
     var countryInput = d3.select("#country").property("value");
     var shapeInput = d3.select("#shape").property("value");
 
+    // Execute the filter. "|| !datetimeInput" means that the field is ignored
+    //   if it is empty
     var filterResults = tableData.filter(ufoSighting =>
         (ufoSighting.datetime === datetimeInput || !datetimeInput) &&
         (ufoSighting.city === cityInput || !cityInput) && 
@@ -149,6 +144,7 @@ function runEnter() {
         (ufoSighting.shape === shapeInput || !shapeInput)
         );
 
+    // Rebuild the table with filtered data
     filterResults.forEach((ufoSighting) => {
     console.log(ufoSighting);
     row = tbody.append("tr");
