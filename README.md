@@ -24,15 +24,15 @@ Create an app that allows users to dynamically filter UFO sighting data by data,
 **STEPS, TOOLS & LANGUAGES USED**
 
 1. Create the structure in HTML. Some starter code was provided, but the filter function was written for this project.
-2. Create and test the JS file that does the following:
-3. Imports data from a JSON file. 
-4. Converts the data into a table that is automatically inserted into the HTML code of the index.html file when it loads into a browser.
-5. Finds unique values for each column the dataset and automatically creates arrays which become the pulldown menu items for the filter buttons. 
-6. Creates event handlers to trigger functions when the filter buttons are used.
-7. 
-8. Convert the scraping code created in Notebook into one Python file as a function that can be called by the app. 
-9. Create the app in a Python file using Flask that calls the scraping function, pulls the results from the Mongo database, and launches the HTML page that renders the data (see next item).
-10. Create an HTML file with Bootstrap and CSS that renders the data in a convenient user interface. 
+2. Integrates Bootstrap CSS code into the HTML.
+3. Create and test the JS file that does the following:
+  3. Imports data from a JSON file. 
+  4. Converts the data into a table that is automatically inserted into the HTML code of the index.html file when it loads into a browser.
+  5. Finds unique values for each column the dataset and automatically creates arrays which become the pulldown menu items for the filter buttons. 
+  6. Creates event handlers to trigger functions when the filter buttons are used.
+  7. Creates a reset button for the filter
+  8. Executes the filter with multiple criteria and automatically updates the HTML code with the filtered data. 
+
 
 =======
 
