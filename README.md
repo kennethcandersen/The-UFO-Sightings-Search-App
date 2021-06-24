@@ -23,9 +23,9 @@ Create an app that allows users to dynamically filter UFO sighting data by data,
 
 **STEPS, TOOLS & LANGUAGES USED**
 
-- Create the structure in HTML. Some starter code was provided, but the filter function was written for this project.
-- Integrates Bootstrap CSS code into the HTML.
-- Create and test the JS file that does the following:
+1. Create the structure in HTML. Some starter code was provided, but the filter function was written for this project.
+2. Integrates Bootstrap CSS code into the HTML.
+3. Create and test the JS file that does the following:
   - Imports data from a JSON file. 
   - Converts the data into a table that is automatically inserted into the HTML code of the index.html file when it loads into a browser.
   - Finds unique values for each column the dataset and automatically creates arrays which become the pulldown menu items for the filter buttons. 
