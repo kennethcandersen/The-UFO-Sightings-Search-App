@@ -4,7 +4,7 @@
 
 **EXECUTIVE SUMMARY**
 
-This app provide dynamic, filtered searches of a UFO sightings database using HTML, CSS and Javascript. 
+This app provides dynamic, filtered searches of a UFO sightings database using HTML, CSS and Javascript. 
 
 See it live [here](https://kennethcandersen.github.io/javascript-challenge/UFO-level-2/): https://kennethcandersen.github.io/javascript-challenge/UFO-level-2/
 
